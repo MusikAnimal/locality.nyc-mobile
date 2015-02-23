@@ -1,0 +1,3 @@
+[submodule "locality.nyc"]
+	path = locality.nyc
+	url = git@github.com:MusikAnimal/locality.nyc.git
