@@ -1,3 +1,6 @@
 [submodule "locality.nyc"]
 	path = locality.nyc
 	url = git@github.com:MusikAnimal/locality.nyc.git
+[submodule "www"]
+	path = www
+	url = git@github.com:MusikAnimal/locality.nyc.git
