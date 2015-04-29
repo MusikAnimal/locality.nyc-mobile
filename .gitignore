@@ -1,2 +1,7 @@
 .DS_Store
 *.swp
+*.keystore
+CordovaApp-debug*
+CordovaApp.ap_*
+CordovaApp
+CordovaApp-release*
