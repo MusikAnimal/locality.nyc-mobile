@@ -1,7 +1,9 @@
 .DS_Store
 *.swp
 *.keystore
+build.prop
 CordovaApp-debug*
 CordovaApp.ap_*
 CordovaApp
 CordovaApp-release*
+*-unaligned.apk
