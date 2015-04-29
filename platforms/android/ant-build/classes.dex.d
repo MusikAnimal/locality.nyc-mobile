@@ -1,11 +1,12 @@
 /Users/aziemba/Sites/MusikAnimal/locality.nyc-mobile/platforms/android/ant-build/classes.dex : \
-/Users/aziemba/Sites/MusikAnimal/locality.nyc-mobile/platforms/android/ant-build/classes/com/phonegap/helloworld/BuildConfig.class \
+/Users/aziemba/Sites/MusikAnimal/locality.nyc-mobile/platforms/android/ant-build/classes/com/musikanimal/locality/nyc/BuildConfig.class \
+/Users/aziemba/Sites/MusikAnimal/locality.nyc-mobile/platforms/android/ant-build/classes/com/musikanimal/locality/nyc/CordovaApp.class \
+/Users/aziemba/Sites/MusikAnimal/locality.nyc-mobile/platforms/android/ant-build/classes/com/musikanimal/locality/nyc/R$attr.class \
+/Users/aziemba/Sites/MusikAnimal/locality.nyc-mobile/platforms/android/ant-build/classes/com/musikanimal/locality/nyc/R$drawable.class \
+/Users/aziemba/Sites/MusikAnimal/locality.nyc-mobile/platforms/android/ant-build/classes/com/musikanimal/locality/nyc/R$string.class \
+/Users/aziemba/Sites/MusikAnimal/locality.nyc-mobile/platforms/android/ant-build/classes/com/musikanimal/locality/nyc/R$xml.class \
+/Users/aziemba/Sites/MusikAnimal/locality.nyc-mobile/platforms/android/ant-build/classes/com/musikanimal/locality/nyc/R.class \
 /Users/aziemba/Sites/MusikAnimal/locality.nyc-mobile/platforms/android/ant-build/classes/com/phonegap/helloworld/CordovaApp.class \
-/Users/aziemba/Sites/MusikAnimal/locality.nyc-mobile/platforms/android/ant-build/classes/com/phonegap/helloworld/R$attr.class \
-/Users/aziemba/Sites/MusikAnimal/locality.nyc-mobile/platforms/android/ant-build/classes/com/phonegap/helloworld/R$drawable.class \
-/Users/aziemba/Sites/MusikAnimal/locality.nyc-mobile/platforms/android/ant-build/classes/com/phonegap/helloworld/R$string.class \
-/Users/aziemba/Sites/MusikAnimal/locality.nyc-mobile/platforms/android/ant-build/classes/com/phonegap/helloworld/R$xml.class \
-/Users/aziemba/Sites/MusikAnimal/locality.nyc-mobile/platforms/android/ant-build/classes/com/phonegap/helloworld/R.class \
 /Users/aziemba/Sites/MusikAnimal/locality.nyc-mobile/platforms/android/ant-build/classes/com/phonegap/locality/nyc/BuildConfig.class \
 /Users/aziemba/Sites/MusikAnimal/locality.nyc-mobile/platforms/android/ant-build/classes/com/phonegap/locality/nyc/CordovaApp.class \
 /Users/aziemba/Sites/MusikAnimal/locality.nyc-mobile/platforms/android/ant-build/classes/com/phonegap/locality/nyc/R$attr.class \
