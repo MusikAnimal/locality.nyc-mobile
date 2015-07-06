@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>ACD1DA00-1C2F-416C-A181-EA34D99132F9</string>
+	<key>IDESourceControlProjectName</key>
+	<string>locality.nyc</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>0ACC3A833747BFCD262DD8F1693BC3E71343F237</key>
+		<string>github.com:MusikAnimal/locality.nyc.git</string>
+		<key>320FD7268E489E8B8077E4386C2768DEE8FB5BE9</key>
+		<string>github.com:MusikAnimal/locality.nyc-mobile.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>platforms/ios/locality.nyc.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>0ACC3A833747BFCD262DD8F1693BC3E71343F237</key>
+		<string>../../../..www/</string>
+		<key>320FD7268E489E8B8077E4386C2768DEE8FB5BE9</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:MusikAnimal/locality.nyc-mobile.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>320FD7268E489E8B8077E4386C2768DEE8FB5BE9</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>320FD7268E489E8B8077E4386C2768DEE8FB5BE9</string>
+			<key>IDESourceControlWCCName</key>
+			<string>locality.nyc-mobile</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>0ACC3A833747BFCD262DD8F1693BC3E71343F237</string>
+			<key>IDESourceControlWCCName</key>
+			<string>www</string>
+		</dict>
+	</array>
+</dict>
+</plist>
