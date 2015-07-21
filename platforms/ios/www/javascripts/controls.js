@@ -11,7 +11,7 @@ $(document).ready(function() {
     }, 5000);
     var timeout2 = setTimeout(function() {
       $("#address").val("");
-      alert("Error fetching location");
+      lnycAlert("Error fetching location");
     }, 10000);
     $.when(getCurrentPosition()).pipe(setCurrentPosition).done(function(results,status) {
       clearTimeout(timeout1);
@@ -30,11 +30,13 @@ $(document).ready(function() {
     $("#show_hide_zones").find("img").removeClass("hidden");
   });
 
-  // TODO: save preferred variation to browser's web storage
   $(".variation-btn").on("click", function() {
-    $('.variation-btn').removeClass('selected');
-    $(this).addClass('selected');
-    setStyle($(this).data('variation'));
+    $('.variation-btn').removeClass("selected");
+    $(this).addClass("selected");
+
+    var style = $(this).data("variation");
+    setStyle(style);
+    window.localStorage.setItem("lnyc-variation", style);
   });
 });
 

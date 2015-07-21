@@ -19,6 +19,10 @@
                         {
                             "xml": "<feature name=\"SplashScreen\"><param name=\"android-package\" value=\"org.apache.cordova.splashscreen.SplashScreen\" /><param name=\"onload\" value=\"true\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Notification\"><param name=\"android-package\" value=\"org.apache.cordova.dialogs.Notification\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -38,7 +42,8 @@
                             "xml": "<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\" />",
                             "count": 1
                         }
-                    ]
+                    ],
+                    "/manifest": []
                 }
             }
         }
@@ -55,6 +60,9 @@
         },
         "org.apache.cordova.splashscreen": {
             "PACKAGE_NAME": "com.phonegap.locality.nyc"
+        },
+        "org.apache.cordova.dialogs": {
+            "PACKAGE_NAME": "com.musikanimal.locality.nyc"
         }
     },
     "dependent_plugins": {}

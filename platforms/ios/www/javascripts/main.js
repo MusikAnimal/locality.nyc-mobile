@@ -12,14 +12,12 @@ var openedInfo = new google.maps.InfoWindow(),
     stableConnection = true, reconnectTimeout, reconnectInterval = 3;
 
 $(document).ready((function() {
-  if(!$("footer").is(":visible")) {
-    isMobile = true;
+  isMobile = detectMobile();
+  if(isMobile) {
+    $("#social").hide();
   }
 
-  // console.log("ready");
-
   initMap();
-
   addMainListeners();
 }));
 
@@ -59,7 +57,7 @@ function addMainListeners() {
   });
 
   $("#offline_notice").on("click", function() {
-    alert("You are offline! locality.nyc uses Google Maps which may be cached on your device, however search functionality will not work while you are offline.");
+    lnycAlert("You are offline! locality.nyc uses Google Maps which may be cached on your device, however search functionality will not work while you are offline.");
   });
 
   setTimeout(checkNetwork, 5000);
