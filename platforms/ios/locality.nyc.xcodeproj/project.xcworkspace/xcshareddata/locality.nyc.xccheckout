@@ -5,9 +5,9 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>ACD1DA00-1C2F-416C-A181-EA34D99132F9</string>
+	<string>26161195-5FA5-4359-920A-8CAFF160AFEF</string>
 	<key>IDESourceControlProjectName</key>
-	<string>locality.nyc</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>0ACC3A833747BFCD262DD8F1693BC3E71343F237</key>
@@ -16,11 +16,11 @@
 		<string>github.com:MusikAnimal/locality.nyc-mobile.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>platforms/ios/locality.nyc.xcodeproj</string>
+	<string>platforms/ios/locality.nyc.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>0ACC3A833747BFCD262DD8F1693BC3E71343F237</key>
-		<string>../../../..www</string>
+		<string>../../../..www/</string>
 		<key>320FD7268E489E8B8077E4386C2768DEE8FB5BE9</key>
 		<string>../../../..</string>
 	</dict>
@@ -46,7 +46,7 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>0ACC3A833747BFCD262DD8F1693BC3E71343F237</string>
 			<key>IDESourceControlWCCName</key>
-			<string>locality.nyc-mobilewww</string>
+			<string>www</string>
 		</dict>
 	</array>
 </dict>
