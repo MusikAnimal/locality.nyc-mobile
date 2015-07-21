@@ -7,7 +7,7 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>26161195-5FA5-4359-920A-8CAFF160AFEF</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>locality.nyc</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>0ACC3A833747BFCD262DD8F1693BC3E71343F237</key>
@@ -16,7 +16,7 @@
 		<string>github.com:MusikAnimal/locality.nyc-mobile.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>platforms/ios/locality.nyc.xcodeproj/project.xcworkspace</string>
+	<string>platforms/ios/locality.nyc.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>0ACC3A833747BFCD262DD8F1693BC3E71343F237</key>
