@@ -88,5 +88,6 @@
 /Users/aziemba/Sites/MusikAnimal/locality.nyc-mobile/platforms/android/assets/www/plugins/org.apache.cordova.splashscreen/www/splashscreen.js \
 /Users/aziemba/Sites/MusikAnimal/locality.nyc-mobile/platforms/android/assets/www/sass/_mixins.scss \
 /Users/aziemba/Sites/MusikAnimal/locality.nyc-mobile/platforms/android/assets/www/sass/application.scss \
+/Users/aziemba/Sites/MusikAnimal/locality.nyc-mobile/platforms/android/assets/www/sass/mobile.scss \
 /Users/aziemba/Sites/MusikAnimal/locality.nyc-mobile/platforms/android/assets/www/views/infowindow.handlebars \
 /Users/aziemba/Sites/MusikAnimal/locality.nyc-mobile/platforms/android/ant-build/AndroidManifest.xml \
