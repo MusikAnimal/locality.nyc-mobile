@@ -1,7 +1,10 @@
+var updateTimeout;
+
 var Zoner = {
   polyList : [],
   names : [],
   filteredState: false,
+  highlightedPoly: null,
 
   plot: function() {
     // TODO: create module for neighborhood
@@ -19,7 +22,7 @@ var Zoner = {
         strokeOpacity: 0.25,
         strokeWeight: 2,
         fillColor: '#'+zone.color,
-        fillOpacity: 0.4
+        fillOpacity: zone.color === "FFFFFF" ? 0 : 0.4
         // clickable: false
       });
 
@@ -36,14 +39,19 @@ var Zoner = {
       poly.setMap(map);
 
       if(!isMobile) {
-        // google.maps.event.addListener(poly, "click", showInfo);
         google.maps.event.addListener(poly, "mouseover", highlight.bind(this, poly));
         google.maps.event.addListener(poly, "mouseout", unhighlight.bind(this, poly, zone));
       }
 
       google.maps.event.addListener(poly, "click", function(e) {
-        Zoner.showInfo(e.latLng.lat(),e.latLng.lng(),false);
+        updateTimeout = setTimeout(function() {
+          Zoner.showInfo(e.latLng.lat(),e.latLng.lng(),false,false,true);
+        }, 200);
       });
+    });
+
+    google.maps.event.addListener(map, "dblclick", function(e) {
+      clearTimeout(updateTimeout);
     });
 
     Zoner.names.sort(function (a,b) {
@@ -117,13 +125,32 @@ var Zoner = {
     Zoner.filteredState = true;
   },
 
-  showInfo: function(lat,lng,zoomTo) {
+  showNeighborhood: function(name, borough) {
+    for(var i=0; i<neighborhoods.length; i++) {
+      if(neighborhoods[i].name.toLowerCase() === name.toLowerCase()) {
+        var center = neighborhoods[i].center;
+        setCenter(center.lat, center.lng);
+        Zoner.showInfo(center.lat, center.lng, 15, i);
+        return true;
+      }
+    }
+  },
+
+  showInfo: function(lat,lng, zoomTo, highlightPolyIndex, fromTap) {
     openedInfo.close();
+
+    if(Zoner.highlightedPoly) {
+      unhighlight(Zoner.highlightedPoly);
+      Zoner.highlightedPoly = null;
+    }
 
     var latLng = getLatLng(lat,lng);
     var matches = Zoner.getNeighborhoods(latLng);
-    if(!matches) {
-      return alert("Neighborhood not established");
+
+    if(matches.length === 0 && fromTap) {
+      return;
+    } else if(matches.length === 0) {
+      return lnycAlert("Neighborhood not established!");
     }
 
     openedInfo = new google.maps.InfoWindow({
@@ -131,6 +158,11 @@ var Zoner = {
     });
     openedInfo.setPosition(latLng);
     openedInfo.open(map);
+
+    if(highlightPolyIndex) {
+      highlight(Zoner.polyList[highlightPolyIndex].polygon);
+      Zoner.highlightedPoly = Zoner.polyList[highlightPolyIndex].polygon;
+    }
 
     $.each(matches, function(i, zone) {
       $(".zone-link[data-index="+zone.polyIndex+"]").hover(function() {

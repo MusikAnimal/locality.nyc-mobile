@@ -7,3 +7,10 @@ CordovaApp.ap_*
 CordovaApp
 CordovaApp-release*
 *-unaligned.apk
+*~.nib
+DerivedData/
+build/
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3

@@ -14,7 +14,7 @@ var openedInfo = new google.maps.InfoWindow(),
 $(document).ready((function() {
   isMobile = detectMobile();
 
-  if(window.cordova) {
+  if(!window.cordova) {
     $("#social").hide();
   }
 
@@ -47,7 +47,7 @@ function setCurrentPosition(position) {
 }
 
 function addMainListeners() {
-  $(document).on('keyup', function(e) {
+  $(document).on("keyup", function(e) {
     if(e.keyCode === 27) {
       if($(document.activeElement).is('body')) {
         $(document).trigger("reset");

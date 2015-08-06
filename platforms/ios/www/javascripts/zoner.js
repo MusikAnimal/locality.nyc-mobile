@@ -4,6 +4,7 @@ var Zoner = {
   polyList : [],
   names : [],
   filteredState: false,
+  highlightedPoly: null,
 
   plot: function() {
     // TODO: create module for neighborhood
@@ -44,8 +45,8 @@ var Zoner = {
 
       google.maps.event.addListener(poly, "click", function(e) {
         updateTimeout = setTimeout(function() {
-          Zoner.showInfo(e.latLng.lat(),e.latLng.lng(),false);
-        }, 500);
+          Zoner.showInfo(e.latLng.lat(),e.latLng.lng(),false,false,true);
+        }, 200);
       });
     });
 
@@ -57,8 +58,10 @@ var Zoner = {
       return a.localeCompare(b);
     });
 
-    for(i in Zoner.names) {
-      $("datalist").append("<option value='"+Zoner.names[i]+"'></option>");
+    if("options" in document.createElement("datalist")) {
+      Zoner.names.forEach(function(name) {
+        $("datalist").append("<option value='"+name+"'></option>");
+      });
     }
   },
 
@@ -135,13 +138,20 @@ var Zoner = {
     }
   },
 
-  showInfo: function(lat,lng, zoomTo, highlightPolyIndex) {
+  showInfo: function(lat,lng, zoomTo, highlightPolyIndex, fromTap) {
     openedInfo.close();
+
+    if(Zoner.highlightedPoly) {
+      unhighlight(Zoner.highlightedPoly);
+      Zoner.highlightedPoly = null;
+    }
 
     var latLng = getLatLng(lat,lng);
     var matches = Zoner.getNeighborhoods(latLng);
 
-    if(matches.length === 0) {
+    if(matches.length === 0 && fromTap) {
+      return;
+    } else if(matches.length === 0) {
       return lnycAlert("Neighborhood not established!");
     }
 
@@ -153,6 +163,7 @@ var Zoner = {
 
     if(highlightPolyIndex) {
       highlight(Zoner.polyList[highlightPolyIndex].polygon);
+      Zoner.highlightedPoly = Zoner.polyList[highlightPolyIndex].polygon;
     }
 
     $.each(matches, function(i, zone) {

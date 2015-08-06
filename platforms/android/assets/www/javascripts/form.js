@@ -5,6 +5,11 @@ $(document).ready(function() {
 
   $("#find_address").submit(function(e) {
     e.preventDefault();
+
+    if($("#address").val() === "") {
+      return lnycAlert("Please provide a search query!");
+    }
+
     $("input").blur();
     $(document).trigger("reset", {skipClearForm: true});
 
@@ -16,12 +21,17 @@ $(document).ready(function() {
       if(query === key || boroughs[key].alternate_names.indexOf(query) !== -1) {
         return Zoner.showBorough(key);
       } else if(borough[query]) {
-        query += ' ' + key;
+        var hasSetCenter = Zoner.showNeighborhood(query, key);
+        if(!hasSetCenter) {
+          query += ' ' + key;
+        } else {
+          return;
+        }
         break;
       }
     }
 
-    if(!stableConnection) return alert("You are offline! Please check your internet connection and try again.");
+    if(!stableConnection) return lnycAlert("You are offline! Please check your internet connection and try again.");
 
     var gc = new google.maps.Geocoder();
 
@@ -34,7 +44,7 @@ $(document).ready(function() {
         })[0];
       }
       if(!locality) {
-        return alert("Address not found within city limits!\nCheck the spelling or try including the name of the borough.");
+        return lnycAlert("Address not found within city limits!\nCheck the spelling or try including the name of the borough.");
       }
 
       var abbrAddress = Zoner.getFormattedAddress(locality);
@@ -57,6 +67,10 @@ $(document).ready(function() {
     }
     if(!opts.skipZoneReset) {
       Zoner.reset();
+    }
+    if(Zoner.highlightedPoly) {
+      unhighlight(Zoner.highlightedPoly);
+      Zoner.highlightedPoly = null;
     }
   });
 });
